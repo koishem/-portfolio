@@ -1,0 +1,151 @@
+footer{ /* футер */
+	padding-top: 57px;
+
+	background-color: #00122f;
+	
+	color: white;
+}
+	.footer-info-container{/* информационный блок */
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	@media(max-width: 767px){
+		.footer-info-container{
+			flex-direction: column;
+			align-items: flex-start;
+			margin: 0 20px;
+		}
+	}
+		.footer-info-container a{
+			color: white;
+
+			text-decoration: none;
+		}
+
+		.left-pece{ /* левая часть информационного блока - меню */
+		}
+		@media(max-width: 767px){
+			.left-pece{
+				width: 100%;
+				border-bottom: 0.5px solid #78b9e8;
+				padding-bottom: 20px;
+			}
+		}
+
+			.left-pece ul li{
+				display: block;
+			}
+
+			.footer-menu {
+				display: inline-block;
+
+				vertical-align: top;
+
+				column-count: 2;
+				column-gap: 35px;
+			}
+
+					.footer-menu li{
+						margin-bottom: 10px;
+					}
+
+		.center-pece{ /* Центральная часть информационного блока -  */
+
+		}
+		@media (max-width: 767px) {
+			.center-pece{
+				padding: 5px;
+				margin:20px 0;
+				width: 100%;
+			}
+		}
+
+			.footer-center-block li a{
+				margin-bottom: 10px;
+
+				display: block;
+			}
+
+		.right-pece{ /* Правая часть информационного блока - контакты */
+		}
+
+			.information {
+			}
+
+				.information li{
+				display: block;
+				}
+
+				.smedia{
+					margin-bottom: 30px;
+				}
+
+					.smedia li{
+						display: inline-block;
+					}
+
+					.smedia li a{
+						display: block;
+					}
+
+					.vk, .fb, .tw, .ig{
+						height: 42px;
+						width: 42px;
+
+						background-repeat: no-repeat;	
+					}
+
+					.vk{
+						background-image: url('../img/vk.png');
+					}
+
+					.fb{
+						margin-left: 15px;
+
+						background-image: url('../img/fb.png');
+					}
+
+					.tw{
+						margin-left: 15px;
+
+						background-image: url('../img/tw.png');
+					}
+
+					.ig{
+						margin-left: 10px;
+
+						background-image: url('../img/ig.png');	
+					}
+
+				.phone{
+					margin-bottom: 26px;
+					padding-left: 30px;
+
+					letter-spacing: -0.36px;
+					font-size: 18px;
+					
+					background-image: url('../img/phone.png');
+					background-repeat: no-repeat;	
+				}
+
+				.mail{
+					padding-left: 30px;
+
+					letter-spacing: -0.36px;
+					font-size: 18px;
+
+					background-image: url('../img/mail.png');
+					background-repeat: no-repeat;
+					background-position: left center;
+				}
+
+	.footer-bottom{ /*??? */
+		margin:10px auto;
+
+		letter-spacing: -0.28px;
+		font-size: 14px;
+
+		text-align: center;	
+	}

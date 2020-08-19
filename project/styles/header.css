@@ -1,0 +1,310 @@
+.whitebackground{
+	background-color: 	white;
+}
+
+.black-bar { /* Синяя полоса - начало футера */
+	padding: 20px 0 19px;
+	height: 55px;
+
+	background-color: #00122f;
+	color: white;
+	font-size: 16px;
+	letter-spacing: -0.32px;
+}
+
+	.black-bar a { /* Стилизация "Самые свежие новости" */
+		text-decoration: underline;
+		color: white;
+	}
+	@media(max-width: 767px){
+		.black-bar{
+			font-size: 14px;
+		}
+	}
+
+	.datetime { /* дата в синей полосе */
+
+	}
+	@media(max-width: 767px){
+		.datetime{
+			display: none;
+		}
+	}
+
+
+
+.search{ /* Поле поиска */
+	position: relative;
+}
+
+	.searchinput{ /*Поле ввода*/
+		padding-left: 20px;
+		
+
+		height: 45px;
+		width: 320px;
+
+		color:#919191;
+		background-color:#f3f3f3;
+		font-size: 14px;
+
+		border: none;
+		border-radius: 23px;
+
+		outline: none;
+	}
+
+	.icon {/*Кнопка поиска */
+		width: 50px;
+		height: 50px;
+
+		position: absolute;
+		right: 10px;
+
+		border: 0;
+
+		background: url('../img/search.png') no-repeat 50% 50%;
+		background-size: 30%;
+		
+		cursor: pointer;
+		outline: none;
+	}
+
+.logo-container{ /*Контейнер с лого элементом в хэдере */
+	margin-top: 40px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+@media(max-width: 767px){
+	.logo-container{
+		margin: 10px 0;
+	}
+}
+
+
+	.left-side{ /*левая часть лого контейнера(лого и город)*/
+
+	}
+
+		.logo { /* Картинка "Новостное Агенство" */
+			margin-right: 62px;
+		}
+
+		.city { /* стилизация пункта назначения  */
+			border-bottom: 1px dotted #448ccb;
+
+			color: #448ccb;	
+		}
+		.arrow { /* Стрелка рядом с ссылкой на выбор города */
+  			width: 20px;
+  			height: 20px;
+
+  			display: inline-block;
+  			vertical-align: middle;
+
+  			background: url('https://pngimage.net/wp-content/uploads/2018/05/drop-down-icon-png.png') no-repeat 0% 50%;
+  			background-size: cover;
+}
+
+	.right-side{/*правая часть лого контейнера погода и поиск*/
+	}
+	@media(max-width: 767px){
+		.right-side{
+
+		}
+	}
+
+		.weather{ /*Стилизация блока погоды*/
+			padding:0 0 3px 30px;
+			margin-right: 47px;
+
+			background: url('../img/weather.png');
+			background-repeat: no-repeat;
+		}
+
+	.logo-element{ /*Элементы лого контейнера */
+		display: inline-block;
+		vertical-align: middle; 
+		}
+		@media(max-width: 767px){
+			.logo-element{
+				display: none;
+			}
+			.logo{
+				display: block;
+			}
+			.search{
+				display: block;
+			}
+			.searchinput{
+				width: 0px;
+				right: 1px;
+				height: 30px;
+				background: transparent;
+				transition: all 0.2s ease;
+				position: fixed;
+			}
+			.active__search{
+				background:#f3f3f3;
+				min-width: 100vw;
+				transition: all 0.2s 0.2s ease;
+			}
+			.icon{
+				transform: translateY(-20%);
+			}
+		}		
+
+.header-menu { /* хэдер меню */
+	margin: 20px 0 20px 0; 
+}
+	@media(max-width: 767px){
+		.header-menu{
+			margin: 0;
+		}
+	}
+
+	.menu-container nav ul{
+		width: 100%;
+		
+	}
+
+	.header-menu li{ /* стилизация меню в хэдере */
+		padding-right:18px;
+
+		display: inline-block;
+	}
+	
+	.header-menu li:after{
+		margin-left: 17px;
+
+		content: '/';
+	}
+
+	@media(max-width: 1020px){
+		.header-menu{
+			width: 100%;
+			font-size: 14px;
+		}
+		.header-menu ul{
+			display: flex;
+			justify-content: space-between;
+		}
+		.header-menu li{ 
+			padding-right:10px;
+		}
+		.header-menu li:after{
+			margin-left: 11px;
+		}
+	}
+
+	.header-menu li:last-child::after{
+		content: '';
+	}
+
+	.header-menu li a{
+		line-height: 50px;
+
+		text-decoration: none;
+		text-align: center;
+	}
+	@media(max-width: 767px){
+		.header-menu li a{
+			line-height: 35px;
+		}
+	}
+
+@media(max-width: 767px){
+	.header-menu{
+		display: none;
+		background-color: white;
+		width: 100%;
+		min-height: 100vw;
+		z-index: 20;
+		background: -webkit-linear-gradient(rgba(0,0,0,0.05) 0%, #f9f9f9 2%, rgba(249,249,249,1) 98%);
+		background: -o-linear-gradient(rgba(0,0,0,0.05) 0%, #f9f9f9 2%, rgba(249,249,249,1) 98%);
+		background: linear-gradient(rgba(0,0,0,0.05) 0%, #f9f9f9 2%, rgba(249,249,249,1) 98%);
+		padding: 5px;
+	}
+	.header-menu ul{
+		flex-direction: column;
+	}
+	.header-menu li{
+		display: block;
+		border-bottom: 1px solid #e3e7e9;
+		margin-bottom: 10px;
+	}
+	.header-menu li::after{
+		content: '';
+	}
+	.header-menu li:last-child{
+		border: 0;
+	}
+	.popup{
+		display: none;
+		width: 100%;
+		height: 100vh;
+		overflow-y: auto;
+		z-index: 500;
+	}
+}
+
+.mobilemenu_buttoncontainer{
+	display: none;
+}
+	@media(max-width: 767px){
+		.mobilemenu_buttoncontainer{
+			display: block;
+		}
+	}
+
+	.menu-button{
+		width: 30px;
+		height: 30px;
+		border: 0;
+		background-color: white;
+		background: url('https://www.apunis.it/brand/apunis/img/ico/android_menu.png');
+		background-size: contain;
+	}
+
+		.active {
+			display: block;
+		}
+
+		.close {
+			background-image: url('https://lesdomtorg.ru/assets/images/panorama/images/close3.png');
+		}
+@media(max-width: 767px){
+	.mobile-container{
+		margin: 10px 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+	}
+	.mobile-menu{
+		margin-left: 15px;
+	}
+}
+
+.mobile-info{
+	display: none;
+}
+
+@media(max-width: 767px){
+	.mobile-info{
+		color: #6a6e71;
+		margin: 35px 0;
+		display: flex;
+		justify-content: space-around;
+		order: -2;
+		width: 100%;
+	}
+	.mobile-date{
+
+	}
+	.weather{
+		margin: 0;
+
+	}
+}
